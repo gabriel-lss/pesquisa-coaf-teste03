@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pesquisa na Planilha</title>
+  </head>
+  <body>
+    <h1>Pesquisa na Planilha</h1>
+    <form method="POST">
+      <label for="search">Digite um termo de pesquisa:</label>
+      <input type="text" name="search" id="search" required />
+      <button type="submit">Buscar</button>
+    </form>
+    <h2>Resultados da Pesquisa:</h2>
+    <ul>
+      {% for result in search_results %}
+      <li>{{ result }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
